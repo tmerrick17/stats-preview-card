@@ -1,0 +1,27 @@
+/* * Color Variables */
+/* * Functional & Descriptive Variables */
+/* * Font Size & Family Variables */
+/* * */
+/* * CSS Reset & Universal Styles */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* * Removing default focus outline in browsers to add my own focus styles */
+a:focus {
+  outline: none;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+/*# sourceMappingURL=main.css.map */
