@@ -27,6 +27,7 @@ $primary-font: 'Inter', sans-serif
 $secondary-font: 'Lexend Deca', sans-serif
 
 /* * Margin Variables
+$margin-lg: 3.8rem
 $margin-md: 2.5rem
 $margin-sm: 1rem
 $margin-xs: 0.3rem
@@ -106,7 +107,7 @@ body
 .card__description
     color: $paragraph-color
     font-family: $secondary-font
-    font-size: $font-size-default
+    font-size: $font-size-sm
     line-height: 1.5rem
     text-align: center
     margin-bottom: $margin-md
@@ -127,7 +128,7 @@ body
     p
         color: $stats-color
         font-family: $secondary-font
-        font-size: $font-size-md
+        font-size: $font-size-sm
         font-weight: 400
         text-transform: uppercase
 
@@ -165,13 +166,39 @@ footer
 
 /* **** Tablet/Desktop Viewport ****/
 
-@media screen and (min-width: 1440px)
-    
-
+@media screen and (min-width: 1024px)
     .card 
         width: 820px
-        grid-template-columns: 52% 48%  
-       
+        height: 350px
+        grid-template-columns: 55% 45%
+        align-items: center  
 
+    .card__hero
+        height: 100%
+        margin-bottom: 0
+        border-radius: 0 10px 10px 0
+        
+        &:nth-of-type(1)
+            order: 2
 
+    .card__main-content
+        padding-left: $margin-lg
+        margin-bottom: 0
 
+        &:nth-of-type(2)
+            order: 1 
+
+    .card__title,
+    .card__description
+        text-align: left
+    
+    .card__title
+        max-width: 18ch
+
+    .card__description
+        max-width: 40ch
+
+    .card__stat-group
+        grid-template-columns: repeat(3, min-content)
+        grid-gap: $margin-md
+        text-align: left
