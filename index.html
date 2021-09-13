@@ -13,13 +13,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
   <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
   
+  <link rel="stylesheet" href="/css/main.css">
   <title>Stats preview card component Project</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
   <!-- * Page Main Content -->
@@ -27,28 +22,36 @@
     <!-- * Card Container -->
     <section class="card">
       <!-- * Hero Card Image -->
-        <div class="card__hero"></div>
-          <!-- * Card Main Content -->
-          <div class="card__main-content">
-            
-            <!-- * Main Header -->
-            
-            Get insights that help your business grow.
-
-            Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-            experience, and overall efficiency.
-
-            10k+ companies
-            314 templates
-            12m+ queries
-          </div>
+      <div class="card__hero"></div>
       
+      <!-- * Card Main Content -->
+      <div class="card__main-content">
+        
+        <!-- * Main Header -->
+        <h1 class="card__title">Get <span>insights</span> that help your business grow.</h1>
+        <!-- * Description -->
+        <p class="card__description">Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.</p>
+        <div class="card__stat-group">
+          <div class="card__stat-subgroup">
+            <h2>10k+</h2>
+            <p>companies</p>
+          </div>
+          <div class="card__stat-subgroup">
+            <h2>314</h2>
+            <p>templates</p>
+          </div>
+          <div class="card__stat-subgroup">
+            <h2>12m+</h2>
+            <p>queries</p>  
+          </div>          
+        </div>
+        
+      </div>   
     </section>
   </main>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <footer>
+    <p>Challenge by <a class="footer__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a class="footer__link" href="https://github.com/tmerrick17/order-summary-component-main">Trevor Merrick</a>.</p>         
+</footer>
 </body>
 </html>

@@ -1,8 +1,15 @@
+/* * All Variables */
 /* * Color Variables */
 /* * Functional & Descriptive Variables */
 /* * Font Size & Family Variables */
-/* * */
+/* * Margin Variables */
+/* * Display Size Variables */
+/* * All Variables End */
 /* * CSS Reset & Universal Styles */
+html {
+  background: #090b1a;
+}
+
 *,
 ::before,
 ::after {
@@ -23,5 +30,139 @@ a:focus {
 
 ::-moz-focus-inner {
   border: 0;
+}
+
+/* **** Mobile Viewport ****/
+/* * Body Styles */
+body {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.center-card {
+  min-height: 90vh;
+  margin-block: 2rem;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background-color: #090b1a;
+}
+
+.card {
+  background-color: #1b1938;
+  width: Min(380px, 88vw);
+  border-radius: 10px;
+  display: -ms-grid;
+  display: grid;
+}
+
+/* * Card Hero Image Styles */
+.card__hero {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(88, 15, 125, 0.6)), to(rgba(88, 15, 125, 0.6))), url("/images/image-header-mobile.jpg") center/cover no-repeat;
+  background: linear-gradient(rgba(88, 15, 125, 0.6), rgba(88, 15, 125, 0.6)), url("/images/image-header-mobile.jpg") center/cover no-repeat;
+  border-radius: 10px 10px 0 0;
+  height: 238px;
+  margin-bottom: 2.5rem;
+}
+
+/* * Card Main Content Styles */
+.card__main-content {
+  padding-inline: 1.8rem;
+  margin-bottom: 2.5rem;
+}
+
+.card__title {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.card__title span {
+  color: #aa5cdb;
+}
+
+.card__description {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  line-height: 1.5rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.card__stat-group {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1.8rem;
+  text-align: center;
+}
+
+.card__stat-subgroup h2 {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.card__stat-subgroup p {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* * Footer Styles */
+footer {
+  font-size: 0.73rem;
+  text-align: center;
+  position: relative;
+  margin: auto 0 0.3rem;
+}
+
+footer p {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* * Footer Link Hover and Focus Styles */
+.footer__link {
+  color: #aa5cdb;
+}
+
+.footer__link:hover, .footer__link:focus {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.footer__link:hover {
+  text-decoration: none;
+}
+
+.footer__link:focus::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #090b1a;
+}
+
+/* **** Tablet/Desktop Viewport ****/
+@media screen and (min-width: 1440px) {
+  .card {
+    width: 820px;
+    -ms-grid-columns: 52% 48%;
+        grid-template-columns: 52% 48%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
