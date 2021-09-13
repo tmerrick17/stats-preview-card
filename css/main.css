@@ -1,11 +1,29 @@
+/* * TABLE OF CONTENTS */
 /* * All Variables */
-/* * Color Variables */
-/* * Functional & Descriptive Variables */
-/* * Font Size & Family Variables */
-/* * Margin Variables */
-/* * Display Size Variables */
+/* * 1.1 Color Variables */
+/* * 1.2 Functional & Descriptive Variables */
+/* * 1.3 Font Size & Family Variables */
+/* * 1.4 Margin Variables */
+/* * 1.5 Display Size Variables */
+/* * 2.1 CSS Reset & Universal Styles */
+/* * 2.2 Removing default focus outline in browsers */
+/* * Mobile Viewport */
+/* * 3 Body Styles */
+/* * 4.1 Center Card Styles */
+/* * 4.2 Card Styles */
+/* * 4.3 Card Main Content Styles */
+/* * 5.1 Footer Styles */
+/* * 5.2 Footer Link Hover and Focus Styles */
+/* * Tablet/Desktop Viewport */
+/* **** END TABLE OF CONTENTS ****/
+/* * All Variables */
+/* * 1.1 Color Variables */
+/* * 1.2 Functional & Descriptive Variables */
+/* * 1.3 Font Size & Family Variables */
+/* * 1.4 Margin Variables */
+/* * 1.5 Display Size Variables */
 /* * All Variables End */
-/* * CSS Reset & Universal Styles */
+/* * 2.1 CSS Reset & Universal Styles */
 html {
   background: #090b1a;
 }
@@ -23,7 +41,7 @@ img {
   max-width: 100%;
 }
 
-/* * Removing default focus outline in browsers to add my own focus styles */
+/* * 2.2 Removing default focus outline in browsers to add my own focus styles */
 a:focus {
   outline: none;
 }
@@ -33,7 +51,7 @@ a:focus {
 }
 
 /* **** Mobile Viewport ****/
-/* * Body Styles */
+/* * 3 Body Styles */
 body {
   min-height: 100vh;
   display: -webkit-box;
@@ -45,6 +63,7 @@ body {
           flex-direction: column;
 }
 
+/* * 4.1 Center Card Styles */
 .center-card {
   min-height: 90vh;
   margin-block: 2rem;
@@ -54,6 +73,7 @@ body {
   background-color: #090b1a;
 }
 
+/* * 4.2 Card Styles */
 .card {
   background-color: #1b1938;
   width: Min(380px, 88vw);
@@ -62,7 +82,6 @@ body {
   display: grid;
 }
 
-/* * Card Hero Image Styles */
 .card__hero {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(88, 15, 125, 0.6)), to(rgba(88, 15, 125, 0.6))), url("/images/image-header-mobile.jpg") center/cover no-repeat;
   background: linear-gradient(rgba(88, 15, 125, 0.6), rgba(88, 15, 125, 0.6)), url("/images/image-header-mobile.jpg") center/cover no-repeat;
@@ -71,7 +90,7 @@ body {
   margin-bottom: 2.5rem;
 }
 
-/* * Card Main Content Styles */
+/* * 4.3 Card Main Content Styles */
 .card__main-content {
   padding-inline: 1.8rem;
   margin-bottom: 2.5rem;
@@ -79,7 +98,7 @@ body {
 
 .card__title {
   color: #fff;
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-seriffot-n;
   font-size: 1.7rem;
   font-weight: 700;
   text-align: center;
@@ -108,7 +127,7 @@ body {
 
 .card__stat-subgroup h2 {
   color: #fff;
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-seriffot-n;
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 0.3rem;
@@ -122,7 +141,7 @@ body {
   text-transform: uppercase;
 }
 
-/* * Footer Styles */
+/* * 5.1 Footer Styles */
 footer {
   font-size: 0.73rem;
   text-align: center;
@@ -134,7 +153,7 @@ footer p {
   color: rgba(255, 255, 255, 0.75);
 }
 
-/* * Footer Link Hover and Focus Styles */
+/* * 5.2 Footer Link Hover and Focus Styles */
 .footer__link {
   color: #aa5cdb;
 }
@@ -198,9 +217,8 @@ footer p {
     max-width: 40ch;
   }
   .card__stat-group {
-    -ms-grid-columns: (min-content)[3];
-        grid-template-columns: repeat(3, -webkit-min-content);
-        grid-template-columns: repeat(3, min-content);
+    grid-template-columns: repeat(3, -webkit-min-content);
+    grid-template-columns: repeat(3, min-content);
     grid-gap: 2.5rem;
     text-align: left;
   }
