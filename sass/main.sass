@@ -1,37 +1,33 @@
-/* * TABLE OF CONTENTS */
+// TABLE OF CONTENTS
+// All Variables
+// 1.1 Color Variables
+// 1.2 Functional & Descriptive Variables
+// 1.3 Font Size & Family Variables 
+// 1.4 Margin Variables 
+// 1.5 Display Size Variables 
+// 2.1 CSS Reset & Universal Styles 
+// 2.2 Removing default focus outline in brows 
+// Mobile Viewport 
+// 3 Body Styles 
+// 4.1 Center Card Styles 
+// 4.2 Card Styles 
+// 4.3 Card Main Content Styles 
+// 5.1 Footer Styles 
+// 5.2 Footer Link Hover and Focus Styles 
+// Tablet/Desktop Viewport 
 
-/* * All Variables */
-/* * 1.1 Color Variables */
-/* * 1.2 Functional & Descriptive Variables */
-/* * 1.3 Font Size & Family Variables */
-/* * 1.4 Margin Variables */
-/* * 1.5 Display Size Variables */
-
-/* * 2.1 CSS Reset & Universal Styles */
-/* * 2.2 Removing default focus outline in browsers
-
-/* * Mobile Viewport */
-/* * 3 Body Styles */
-/* * 4.1 Center Card Styles */
-/* * 4.2 Card Styles */
-/* * 4.3 Card Main Content Styles */
-/* * 5.1 Footer Styles */
-/* * 5.2 Footer Link Hover and Focus Styles */
-
-/* * Tablet/Desktop Viewport */
-
-/* **** END TABLE OF CONTENTS ****/
+// END TABLE OF CONTENTS 
 
 
-/* * All Variables */
-/* * 1.1 Color Variables */
+// All Variables 
+//1.1 Color Variables 
 $dark-blue: hsl(233, 47%, 7%)
 $dark-desat-blue: hsl(244, 38%, 16%)
 $soft-violet: hsl(277, 64%, 61%)
 $transparent-white1: hsla(0, 0%, 100%, 0.75)
 $transparent-white2: hsla(0, 0%, 100%, 0.6)
 
-/* * 1.2 Functional & Descriptive Variables */
+// 1.2 Functional & Descriptive Variables 
 $main-bg: $dark-blue
 $card-bg: $dark-desat-blue
 $accent-color: $soft-violet
@@ -41,7 +37,7 @@ $stats-heading-color: #fff
 $stats-color: $transparent-white2
 $footer-font-color: $transparent-white1
 
-/* * 1.3 Font Size & Family Variables */
+// 1.3 Font Size & Family Variables 
 $font-size-sm: 0.73rem
 $font-size-md: 1.5rem
 $font-size-lg: 1.7rem
@@ -49,16 +45,16 @@ $font-size-lg: 1.7rem
 $primary-font: 'Inter', sans-seriffot-n
 $secondary-font: 'Lexend Deca', sans-serif
 
-/* * 1.4 Margin Variables */
+// 1.4 Margin Variables 
 $margin-lg: 3.8rem
 $margin-md: 2.5rem
 $margin-sm: 1rem
 $margin-xs: 0.3rem
 
-/* * 1.5 Display Size Variables */
+// 1.5 Display Size Variables 
 $desktop-size: 1024px
 
-/* * All Variables End */
+// All Variables End 
 
 /* * 2.1 CSS Reset & Universal Styles */
 html
@@ -106,10 +102,16 @@ body
     display: grid
 
 .card__hero
-    background: linear-gradient(rgba(88, 15, 125, 0.6), rgba(88, 15, 125, 0.6)), url('/images/image-header-mobile.jpg') center/cover no-repeat 
-    border-radius: 10px 10px 0 0;
-    height: 238px
-    margin-bottom: 2.5rem;
+    background: url("../images/image-header-mobile.jpg") center/cover no-repeat
+    border-radius: 10px 10px 0 0
+    min-height: 238px
+    margin-bottom: 2.5rem
+
+.card__opacity 
+    background-color: rgba(88, 15, 125, 0.6)
+    height: 100%
+    width: 100%
+
 
 /* * 4.3 Card Main Content Styles */
 .card__main-content
@@ -197,6 +199,7 @@ footer
         align-items: center  
 
     .card__hero
+        background: url("../images/image-header-desktop.jpg") center/cover no-repeat
         height: 100%
         margin-bottom: 0
         border-radius: 0 10px 10px 0

@@ -32,7 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [My Solution Page at Frontend Mentor](https://www.frontendmentor.io/solutions/mobile-first-page-using-sass-and-bem-O8jQgAgln)
+- Live Site URL: [Live Site](https://tmerrick17.github.io/stats-preview-card/)
 
 ## My process
 
@@ -51,13 +52,12 @@ Next worked on:
   
 Finally worked on:
   - Creating a Table of Contents for my SASS/CSS files.
-  - Minifying my CSS file.
 
 ### Built with
 
 - Semantic HTML5 markup
 - SASS
-- SASS custom properties
+- SASS custom variables
 - Flexbox
 - CSS Grid
 - Mobile-first workflow

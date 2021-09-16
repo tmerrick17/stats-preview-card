@@ -1,28 +1,3 @@
-/* * TABLE OF CONTENTS */
-/* * All Variables */
-/* * 1.1 Color Variables */
-/* * 1.2 Functional & Descriptive Variables */
-/* * 1.3 Font Size & Family Variables */
-/* * 1.4 Margin Variables */
-/* * 1.5 Display Size Variables */
-/* * 2.1 CSS Reset & Universal Styles */
-/* * 2.2 Removing default focus outline in browsers */
-/* * Mobile Viewport */
-/* * 3 Body Styles */
-/* * 4.1 Center Card Styles */
-/* * 4.2 Card Styles */
-/* * 4.3 Card Main Content Styles */
-/* * 5.1 Footer Styles */
-/* * 5.2 Footer Link Hover and Focus Styles */
-/* * Tablet/Desktop Viewport */
-/* **** END TABLE OF CONTENTS ****/
-/* * All Variables */
-/* * 1.1 Color Variables */
-/* * 1.2 Functional & Descriptive Variables */
-/* * 1.3 Font Size & Family Variables */
-/* * 1.4 Margin Variables */
-/* * 1.5 Display Size Variables */
-/* * All Variables End */
 /* * 2.1 CSS Reset & Universal Styles */
 html {
   background: #090b1a;
@@ -33,8 +8,7 @@ html {
 ::after {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 img {
@@ -54,20 +28,14 @@ a:focus {
 /* * 3 Body Styles */
 body {
   min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 /* * 4.1 Center Card Styles */
 .center-card {
   min-height: 90vh;
   margin-block: 2rem;
-  display: -ms-grid;
   display: grid;
   place-items: center;
   background-color: #090b1a;
@@ -76,18 +44,22 @@ body {
 /* * 4.2 Card Styles */
 .card {
   background-color: #1b1938;
-  width: Min(380px, 88vw);
+  width: min(380px, 88vw);
   border-radius: 10px;
-  display: -ms-grid;
   display: grid;
 }
 
 .card__hero {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(88, 15, 125, 0.6)), to(rgba(88, 15, 125, 0.6))), url("/images/image-header-mobile.jpg") center/cover no-repeat;
-  background: linear-gradient(rgba(88, 15, 125, 0.6), rgba(88, 15, 125, 0.6)), url("/images/image-header-mobile.jpg") center/cover no-repeat;
+  background: url("../images/image-header-mobile.jpg") center/cover no-repeat;
   border-radius: 10px 10px 0 0;
-  height: 238px;
+  min-height: 238px;
   margin-bottom: 2.5rem;
+}
+
+.card__opacity {
+  background-color: rgba(88, 15, 125, 0.6);
+  height: 100%;
+  width: 100%;
 }
 
 /* * 4.3 Card Main Content Styles */
@@ -104,7 +76,6 @@ body {
   text-align: center;
   margin-bottom: 1rem;
 }
-
 .card__title span {
   color: #aa5cdb;
 }
@@ -119,7 +90,6 @@ body {
 }
 
 .card__stat-group {
-  display: -ms-grid;
   display: grid;
   grid-gap: 1.8rem;
   text-align: center;
@@ -132,7 +102,6 @@ body {
   font-weight: 700;
   margin-bottom: 0.3rem;
 }
-
 .card__stat-subgroup p {
   color: rgba(255, 255, 255, 0.6);
   font-family: "Lexend Deca", sans-serif;
@@ -148,7 +117,6 @@ footer {
   position: relative;
   margin: auto 0 0.3rem;
 }
-
 footer p {
   color: rgba(255, 255, 255, 0.75);
 }
@@ -157,15 +125,12 @@ footer p {
 .footer__link {
   color: #aa5cdb;
 }
-
 .footer__link:hover, .footer__link:focus {
   color: rgba(255, 255, 255, 0.75);
 }
-
 .footer__link:hover {
   text-decoration: none;
 }
-
 .footer__link:focus::after {
   content: "";
   position: absolute;
@@ -181,47 +146,45 @@ footer p {
   .card {
     width: 820px;
     height: 350px;
-    -ms-grid-columns: 55% 45%;
-        grid-template-columns: 55% 45%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    grid-template-columns: 55% 45%;
+    align-items: center;
   }
+
   .card__hero {
+    background: url("../images/image-header-desktop.jpg") center/cover no-repeat;
     height: 100%;
     margin-bottom: 0;
     border-radius: 0 10px 10px 0;
   }
   .card__hero:nth-of-type(1) {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    order: 2;
   }
+
   .card__main-content {
     padding-left: 3.8rem;
     margin-bottom: 0;
   }
   .card__main-content:nth-of-type(2) {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    order: 1;
   }
+
   .card__title,
-  .card__description {
+.card__description {
     text-align: left;
   }
+
   .card__title {
     max-width: 18ch;
   }
+
   .card__description {
     max-width: 40ch;
   }
+
   .card__stat-group {
     grid-template-columns: repeat(3, -webkit-min-content);
     grid-template-columns: repeat(3, min-content);
     grid-gap: 2.5rem;
     text-align: left;
   }
-}
-/*# sourceMappingURL=main.css.map */
-
+}/*# sourceMappingURL=main.css.map */
