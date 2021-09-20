@@ -4,7 +4,6 @@
 // 1.2 Functional & Descriptive Variables
 // 1.3 Font Size & Family Variables 
 // 1.4 Margin Variables 
-// 1.5 Display Size Variables 
 // 2.1 CSS Reset & Universal Styles 
 // 2.2 Removing default focus outline in brows 
 // Mobile Viewport 
@@ -38,27 +37,26 @@ $stats-color: $transparent-white2
 $footer-font-color: $transparent-white1
 
 // 1.3 Font Size & Family Variables 
-$font-size-sm: 0.73rem
-$font-size-md: 1.5rem
-$font-size-lg: 1.7rem
+$font-size-default: 1.5rem
+$font-size-md: 2.4rem
+$font-size-lg: 2.9rem
 
 $primary-font: 'Inter', sans-seriffot-n
 $secondary-font: 'Lexend Deca', sans-serif
 
 // 1.4 Margin Variables 
+$margin-xs: 0.5rem
+$margin-sm: 1.4rem
+$margin-md: 3.6rem
 $margin-lg: 3.8rem
-$margin-md: 2.5rem
-$margin-sm: 1rem
-$margin-xs: 0.3rem
-
-// 1.5 Display Size Variables 
-$desktop-size: 1024px
+$margin-xl: 7.2rem
 
 // All Variables End 
 
 /* * 2.1 CSS Reset & Universal Styles */
 html
     background: $main-bg
+    font-size: 62.5%
 
 *,
 ::before,
@@ -97,32 +95,31 @@ body
 /* * 4.2 Card Styles */
 .card 
     background-color: $card-bg
-    width: Min(380px, 88vw)
-    border-radius: 10px
+    width: Min(388px, 88vw)
+    border-radius: 1rem
     display: grid
 
 .card__hero
     background: url("../images/image-header-mobile.jpg") center/cover no-repeat
-    border-radius: 10px 10px 0 0
+    border-radius: 1rem 1rem 0 0
     min-height: 238px
-    margin-bottom: 2.5rem
+    margin-bottom: 3.8rem
 
 .card__opacity 
     background-color: rgba(88, 15, 125, 0.6)
     height: 100%
     width: 100%
 
-
 /* * 4.3 Card Main Content Styles */
 .card__main-content
-    padding-inline: 1.8rem
+    padding-inline: 3.5rem
     margin-bottom: $margin-md
     
 .card__title
     color: $main-heading-color
     font-family: $primary-font
     font-size: $font-size-lg
-    font-weight: 700
+    font-weight: 500
     text-align: center
     margin-bottom: $margin-sm
 
@@ -131,15 +128,16 @@ body
 
 .card__description
     color: $paragraph-color
-    font-family: $secondary-font
-    font-size: $font-size-sm
-    line-height: 1.5rem
+    font-family: $primary-font
+    font-size: $font-size-default
+    font-size: 200
+    line-height: 2.4rem
     text-align: center
     margin-bottom: $margin-md
 
 .card__stat-group
     display: grid
-    grid-gap: 1.8rem
+    grid-gap: 2.88rem
     text-align: center
     
 .card__stat-subgroup
@@ -147,20 +145,21 @@ body
         color: $stats-heading-color
         font-family: $primary-font
         font-size: $font-size-md
-        font-weight: 700
+        font-weight: 400
         margin-bottom: $margin-xs
     
     p
+        letter-spacing: 0.16rem
         color: $stats-color
         font-family: $secondary-font
-        font-size: $font-size-sm
-        font-weight: 400
+        font-size: 1.15rem
+        font-weight: 200
         text-transform: uppercase
 
 
 /* * 5.1 Footer Styles */
 footer
-    font-size: $font-size-sm
+    font-size: $font-size-default
     text-align: center
     position: relative
     margin: auto 0 $margin-xs
@@ -191,25 +190,25 @@ footer
 
 /* **** Tablet/Desktop Viewport ****/
 
-@media screen and (min-width: $desktop-size)
+@media screen and (min-width: 1200px)
     .card 
-        width: 820px
-        height: 350px
-        grid-template-columns: 55% 45%
+        min-width: 110.06rem
+        min-height: 44.6rem
+        grid-template-columns: 51.5% 48.5%
         align-items: center  
 
     .card__hero
         background: url("../images/image-header-desktop.jpg") center/cover no-repeat
         height: 100%
         margin-bottom: 0
-        border-radius: 0 10px 10px 0
+        border-radius: 0 1rem 1rem 0
         
         &:nth-of-type(1)
             order: 2
 
     .card__main-content
-        padding-left: $margin-lg
-        margin-bottom: 0
+        padding-left: $margin-xl
+        margin-block: -2.8rem 0
 
         &:nth-of-type(2)
             order: 1 
@@ -220,11 +219,19 @@ footer
     
     .card__title
         max-width: 18ch
+        font-size: 3.6rem
+        margin-bottom: 3rem
 
     .card__description
         max-width: 40ch
+        margin-bottom: 7rem
 
     .card__stat-group
         grid-template-columns: repeat(3, min-content)
         grid-gap: $margin-md
         text-align: left
+
+    .card__stat-subgroup
+        h2 
+            margin-bottom: 0.6rem
+
